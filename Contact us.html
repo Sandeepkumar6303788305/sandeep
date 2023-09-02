@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .bg {
+            border: 5px solid rgb(2, 23, 31);
+            display: flex;
+            justify-content: center;
+            background-image: url(phone\ 234.jpg);
+            height: 450px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+        footer {
+        background-color: rgb(234, 139, 23);
+        padding: 20px;
+        color: black;
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    .social-links {
+        text-align: left; 
+    }
+    table{
+        color: coral;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="bg">
+        <form action="ContactSuccess.html">
+            <h1 align="center"><strong style="color: chartreuse;">CONTACT US</strong></h1>
+            <table align="center">
+                <tr>
+                    <td>Full name:</td>
+                    <td><input type="text" placeholder="Full name" name="fname" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>PhoneNumber:</td>
+                    <td><input type="tel" name="phone" placeholder="enter the PhoneNumber" pattern="[6-9]{1}[0-9]{9}" maxlength="10"  style="color: black;" required ><p></p></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="email" placeholder="Please enter Email" name="email" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>ADDRESS:</td>
+                    <td><input type="text" placeholder="Enter Address" name="Address" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>DISTRICT</td>
+                    <td><input type="text" placeholder="Please enter your district" name="district" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>CITY:</td>
+                    <td><input type="city" placeholder="Enter city" name="city" required><p></p></td>
+                </tr>
+                <tr>
+                    <td>Message:</td>
+                    <td><textarea id="message"  placeholder="message" class="message-box" required></textarea><p></p></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="SEND" style="background-color: gold;color:red">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <footer>
+        <div class="social-links">
+            <h3 style="color: rgb(9, 172, 39)">SOCIAL</h3>
+            <a href="https://www.facebook.com/">Facebook</a><br>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D">Twitter</a><br>
+            <a href="https://www.youtube.com/results?search_query=about+mobils">YouTube</a>
+        </div>
+        <div class="mail-section">
+            <h3>Mail Us</h3>
+            <hr>
+            <p> Internet Private Limited,<br>
+
+                Buildings Alyssa, Begonia &<br>
+                
+                        Clove Embassy Tech Village,<br>
+                
+                Outer Ring Road, Devarabeesanahalli Village,<br>
+                
+                Bengaluru, 560103,<br>
+                
+                Karnataka, India</p>
+           
+        </div>
+        <div>
+
+            <h3>Registered Office Address</h3>
+            <hr>
+
+            <p>Natural Natures Mart,<br>
+
+                Buildings Alyssa, Begonia &<br>
+                
+                Clove Embassy Tech Village,<br>
+                
+                Outer Ring Road, Devarabeesanahalli Village,<br>
+                
+                Bengaluru, 560103,<br>
+                
+                Karnataka, India<br>
+                
+                CIN : U51109KA2012PTC066107<br>
+                
+                Telephone: 9848875388</p>
+
+        </div>
+    </footer>
+    <script>
+        function validateForm() {
+            var fullName = document.forms["contactForm"]["fname"].value;
+            var phoneNumber = document.forms["contactForm"]["mno"].value;
+            var email = document.forms["contactForm"]["email"].value;
+            var address = document.forms["contactForm"]["Address"].value;
+            var district = document.forms["contactForm"]["district"].value;
+            var city = document.forms["contactForm"]["city"].value;
+            var message = document.forms["contactForm"]["message"].value;
+    
+            if (fullName === "") {
+                alert("Full name must be filled out");
+                return false;
+            }
+    
+            if (phoneNumber === "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+    
+            if (phoneNumber.length !== 10) {
+                alert("Phone number must have exactly 10 digits");
+                return false;
+            }
+    
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+    
+            if (address === "") {
+                alert("Address must be filled out");
+                return false;
+            }
+    
+            if (district === "") {
+                alert("District must be filled out");
+                return false;
+            }
+    
+            if (city === "") {
+                alert("City must be filled out");
+                return false;
+            }
+    
+            if (message === "") {
+                alert("Message must be filled out");
+                return false;
+            }
+        }
+</script>
+</body>
+</html>
